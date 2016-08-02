@@ -12,7 +12,7 @@ class resqueweb::params {
           $package_name   = 'resque-web'
           $package_ensure = 'present'
           $service_manage = true
-          $service_name   = true
+          $service_name   = 'resque-web'
           $service_enable = true
           $service_ensure = 'running'
         }
