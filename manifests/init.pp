@@ -31,9 +31,9 @@ class resqueweb (
           ensure => $service_ensure,
           enable => $service_enable
         }
-      }
 
-      Package[$package_name] -> Service[$service_name]
+        Package[$package_name] ~> Service[$service_name]
+      }
     }
     default: {
       fail("Invalid value ${ensure} passed for parameter ensure. Value should be present or absent")
