@@ -7,7 +7,7 @@ class resqueweb::params {
   case $::operatingsystem {
     'Ubuntu': {
       case $::operatingsystemrelease {
-        '14.04': {
+        '14.04', '16.04': {
           $ensure = 'present'
           $package_name   = 'resque-web'
           $package_ensure = 'present'
